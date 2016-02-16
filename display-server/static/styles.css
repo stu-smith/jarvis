@@ -1,0 +1,57 @@
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background-color: #000;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body { 
+	min-height: 100vh;
+}
+
+body, ul, ol, dl, figure {
+	margin: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner { 
+		border : 0px;
+}
+
+input[type="search"]{
+	-webkit-appearance:textfield;
+}
+
+input[type="submit"] {
+	-webkit-appearance:none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	background: #000;
+	color: #fff;
+}
+
+td {
+	padding: 1em;
+	border: 1px solid black;
+}
+
+.main {
+	background-color: #f00;
+}
+
+.display-text {
+	background-color: #0f0;
+	height: 2em;
+}

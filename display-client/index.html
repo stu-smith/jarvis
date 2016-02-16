@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jarvis &mdash; Loading...</title>
+    <style type="text/css">
+      html {
+        background-color: #000;
+        color: #01A201;
+        font-family: DejaVu Sans Mono, Lucida Console, Sans Serif;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>
+      Jarvis
+      <br />
+      ------
+      <br />
+      <br />
+      Loading: <span id='diagnostic'></span>
+    </p>
+
+    <script>
+      var config = require('../config.json');
+      var displayServerPort = config['display-server-port'];
+      var displayServerHost = config['display-server-host'];
+      var diagnostic = document.getElementById('diagnostic');
+      var redirectUrl = 'http://' + displayServerHost + ':' + displayServerPort + '/';
+
+      diagnostic.appendChild(document.createTextNode(redirectUrl));
+
+      var httpGetAsync = function(url, callback)
+      {
+        var xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.onreadystatechange = function() {
+          if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            callback(xmlHttp.responseText);
+          }
+        }
+
+        xmlHttp.open('GET', url, true);
+        xmlHttp.send(null);
+      };
+
+      var onTimer = function () {
+        httpGetAsync(redirectUrl, function () {
+          window.location = redirectUrl;
+        });
+      };
+
+      setTimeout(onTimer, 1000);
+
+    </script
+  </body>
+</html>

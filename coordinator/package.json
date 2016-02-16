@@ -1,0 +1,8 @@
+{
+  "name": "jarvis-coordinator",
+  "version": "0.0.1",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.13.3"
+  }
+}

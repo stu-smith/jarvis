@@ -1,0 +1,9 @@
+{
+  "name": "jarvis-display-server",
+  "version": "0.0.1",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "socket.io": "^1.3.7"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "display-server-host": "localhost",
+  "display-server-port": 3000,
+  "coordinator-host": "localhost",
+  "coordinator-port": 3001
+}
